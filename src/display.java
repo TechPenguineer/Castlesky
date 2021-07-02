@@ -3,7 +3,7 @@ import java.awt.Canvas;
 
 import javax.swing.JFrame;
 
-public class Display extends Canvas {
+public class Display extends Canvas implements Runnable {
 
     private static final long serialVersionUID = 1L;
 
@@ -16,7 +16,10 @@ public class Display extends Canvas {
 
     private void start(){
         if(running)return;
+        running = true;
+        thread = new Thread(this);
     }
+    public void run(){}
     public static void main(String[] args) {
         Display game = new Display();
         JFrame frame = new JFrame();
