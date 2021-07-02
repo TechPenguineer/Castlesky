@@ -12,8 +12,10 @@ public class Display extends Canvas {
         Display game = new Display();
         JFrame frame = new JFrame();
         frame.add(game);
+        frame.pack();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(WIDTH,HEIGHT);
+        frame.setLocationRelativeTo(null);
         frame.setResizable(false);
         frame.setVisible(true);
 
