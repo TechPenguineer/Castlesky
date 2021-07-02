@@ -19,6 +19,8 @@ public class Display extends Canvas implements Runnable {
         running = true;
         thread = new Thread(this);
         thread.start();
+
+        System.out.println("Working");
     }
     private void stop(){
         if(!running) return;
@@ -32,7 +34,9 @@ public class Display extends Canvas implements Runnable {
         }
     }
     public void run(){
+        while(running){
 
+        }
     }
     public static void main(String[] args) {
         Display game = new Display();
@@ -46,6 +50,6 @@ public class Display extends Canvas implements Runnable {
         frame.setResizable(false);
         frame.setVisible(true);
 
-        System.out.println("Running...");
+        game.start();
     }
 }
