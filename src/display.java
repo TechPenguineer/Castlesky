@@ -13,6 +13,10 @@ public class Display extends Canvas {
 
     private Thread thread;
     private boolean running = false;
+
+    private void start(){
+        if(running)return;
+    }
     public static void main(String[] args) {
         Display game = new Display();
         JFrame frame = new JFrame();
