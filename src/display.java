@@ -1,10 +1,12 @@
 
-public class Display {
+import java.awt.Canvas;
+
+public class Display extends Canvas {
 
     int WIDTH = 800;
     int HEIGHT = 600;
 
-     public static void main(String[] args) {
-            
+    public static void main(String[] args) {
+        Display game = 
     }
 }
