@@ -11,6 +11,8 @@ public class Display extends Canvas {
     public static final int HEIGHT = 600;
     public static final String TITLE = "Castlesky Pre-Alpha 0.01";
 
+    private Thread thread;
+    private boolean running = false;
     public static void main(String[] args) {
         Display game = new Display();
         JFrame frame = new JFrame();
