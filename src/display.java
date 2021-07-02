@@ -18,8 +18,22 @@ public class Display extends Canvas implements Runnable {
         if(running)return;
         running = true;
         thread = new Thread(this);
+        thread.start();
     }
-    public void run(){}
+    private void stop(){
+        if(!running) return;
+        running = false;
+        try{
+            thread.join();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            System.exit(0);
+        }
+    }
+    public void run(){
+
+    }
     public static void main(String[] args) {
         Display game = new Display();
         JFrame frame = new JFrame();
