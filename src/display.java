@@ -5,12 +5,16 @@ import javax.swing.JFrame;
 
 public class Display extends Canvas {
 
-    int WIDTH = 800;
-    int HEIGHT = 600;
+    public static final int WIDTH = 800;
+    public static final int HEIGHT = 600;
 
     public static void main(String[] args) {
         Display game = new Display();
         JFrame frame = new JFrame();
         frame.add(game);
+        frame.setSize(WIDTH,HEIGHT);
+        frame.setResizable(false);
+        frame.setVisible(true);
+
     }
 }
