@@ -17,5 +17,6 @@ public class Display extends Canvas {
         frame.setResizable(false);
         frame.setVisible(true);
 
+        System.out.println("Running...");
     }
 }
