@@ -11,5 +11,6 @@ public class Display extends Canvas {
     public static void main(String[] args) {
         Display game = new Display();
         JFrame frame = new JFrame();
+        frame.add(game);
     }
 }
